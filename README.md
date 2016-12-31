@@ -40,7 +40,7 @@ curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-go/master/.vi
 vim +PlugInstall +qall
 ```
 
-### Compile
+## Compile
 
 Let's compile the YouCompleteMe for autocompletion.
 
