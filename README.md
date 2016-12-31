@@ -1,6 +1,6 @@
 # Vim for Python3 and Go
 
-This is my minimal .vimrc file, I am using for day-to-day Python and Go programming. You can follow this at your own risk.
+This is my minimal .vimrc file, I am using for day-to-day Python3 and Go programming. You can follow this at your own risk.
 
 # Usage
 
