@@ -18,6 +18,7 @@ Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " Basic configs
+set nocompatible
 filetype plugin indent on
 syntax enable
 set encoding=utf-8
@@ -28,7 +29,24 @@ set shiftwidth=4
 set textwidth=79
 set expandtab
 set autoindent
+set smartindent
 set fileformat=unix
+set backspace=indent,eol,start
+
+" Do not keep a backup file, use versions instead
+if has("vms")
+    set nobackup
+else
+    set backup
+endif
+set history=50
+set showcmd
+set incsearch
+
+" Enableing mouse
+if has('mouse')
+    set mouse=a
+endif
 
 " Airline configs
 let g:airline_theme='papercolor'
@@ -108,6 +126,12 @@ let g:ycm_seed_identifiers_with_syntax = 0
 " Jedi configs
 let g:jedi#popup_on_dot = 0
 autocmd FileType python setlocal completeopt-=preview
+
+" GVIM configs
+set guifont=Monaco\ 12
+if has('gui_running')
+    set lines=999 columns=999
+endif
 
 " Shortcut
 au FileType go nmap <leader>r <Plug>(go-run)
