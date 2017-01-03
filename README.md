@@ -8,7 +8,7 @@ You're gonna do Python3 and Go programming on Vim. Let me suppose that you have 
 
 ## Install
 
-You should always use the latest Vim (with vim-gnome, build-essential, cmake, git, python3-dev, python3-pip). For Ubuntu, open terminal and play these commands to install them.
+You should always use the latest Vim (with vim-gnome, build-essential, cmake, git, python3-dev, python3-pip). For Ubuntu, open terminal and play these commands to install them. These command will also install GVim (Vim with GUI) as I also like to use GVim.
 
 ```
 sudo add-apt-repository ppa:jonathonf/vim -y
@@ -35,6 +35,9 @@ sudo pip3 install pylint
 ```
 ```
 curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-go/master/.vimrc" > ~/.vimrc
+```
+```
+curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-go/master/.gvimrc" > ~/.gvimrc
 ```
 ```
 vim +PlugInstall +qall
