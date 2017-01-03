@@ -52,14 +52,15 @@ python3 install.py --gocode-completer
 ```
 
 ## Shortcuts
+The **Leader key** is a way of extending the power of VIM's shortcuts by using sequences of keys to perform a command. The default leader key is **backslash**.
 
 | Key | Description |
 | --- | --- |
 | F5 | Run Python3 Scripts |
-| /r | go run |
-| /b | go build |
-| /t | go test |
-| /c | go coverage |
+| \r | go run |
+| \b | go build |
+| \t | go test |
+| \c | go coverage |
 
 # Roadmap
 
