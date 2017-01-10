@@ -25,13 +25,7 @@ sudo apt install build-essential cmake git python3-dev python3-pip vim vim-gnome
 Play these commands on Terminal to set up Vim.
 
 ```
-sudo pip3 install jedi
-```
-```
-sudo pip3 install flake8
-```
-```
-sudo pip3 install pylint
+sudo pip3 install jedi flake8 pylint
 ```
 ```
 curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-go/master/.vimrc" > ~/.vimrc
