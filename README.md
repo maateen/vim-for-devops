@@ -1,10 +1,10 @@
-# Vim for Python3 and Go
+# Vim for Python3 and C
 
-This is my minimal .vimrc file, I am using for day-to-day Python3 and Go programming. You can follow this at your own risk.
+This is my minimal .vimrc file, I am using for day-to-day Python3 and C programming. You can follow this at your own risk.
 
 # Usage
 
-You're gonna do Python3 and Go programming on Vim. Let me suppose that you have installed them already.
+You're gonna do Python3 and C programming on Vim. Let me suppose that you have installed them already.
 
 ## Install
 
@@ -28,10 +28,10 @@ Play these commands on Terminal to set up Vim.
 sudo pip3 install jedi flake8 pylint
 ```
 ```
-curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-go/master/.vimrc" > ~/.vimrc
+curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-c/master/.vimrc" > ~/.vimrc
 ```
 ```
-curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-go/master/.gvimrc" > ~/.gvimrc
+curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-c/master/.gvimrc" > ~/.gvimrc
 ```
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -48,7 +48,7 @@ Let's compile the YouCompleteMe for autocompletion.
 cd ~/.vim/plugged/YouCompleteMe/
 ```
 ```
-python3 install.py --gocode-completer
+python3 install.py
 ```
 
 ## Shortcuts
@@ -57,11 +57,7 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 | Key | Description |
 | --- | --- |
 | F5 | Run Python3 Scripts |
-| \r | go run |
-| \b | go build |
-| \t | go test |
-| \c | go coverage |
 
 # Roadmap
 
-I can't remmebr. :(
+I can't remember. :(
