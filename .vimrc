@@ -9,7 +9,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'hdima/python-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'fatih/vim-go'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'davidhalter/jedi-vim'
@@ -72,16 +71,6 @@ colorscheme PaperColor
 set number
 set laststatus=2
 let python_highlight_all = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-let g:go_fmt_autosave = 0
-let g:go_play_open_browser = 0
 
 " Neocomplete configs
 let g:acp_enableAtStartup = 0
