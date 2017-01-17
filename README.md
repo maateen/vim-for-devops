@@ -1,10 +1,10 @@
-# Vim for Python3 and C
+# Vim for Python
 
-This is my minimal .vimrc file, I am using for day-to-day Python3 and C programming. You can follow this at your own risk.
+This is my minimal .vimrc file, I am using for day-to-day Python3 C programming. You can follow this at your own risk.
 
 # Usage
 
-You're gonna do Python3 and C programming on Vim. Let me suppose that you have installed them already.
+You're gonna do Python3 programming on Vim. Let me suppose that you have installed it already.
 
 ## Install
 
@@ -28,10 +28,10 @@ Play these commands on Terminal to set up Vim.
 sudo pip3 install jedi flake8 pylint
 ```
 ```
-curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-c/master/.vimrc" > ~/.vimrc
+curl "https://raw.githubusercontent.com/maateen/vim-for-python/master/.vimrc" > ~/.vimrc
 ```
 ```
-curl "https://raw.githubusercontent.com/maateen/vim-for-python-and-c/master/.gvimrc" > ~/.gvimrc
+curl "https://raw.githubusercontent.com/maateen/vim-for-python/master/.gvimrc" > ~/.gvimrc
 ```
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -52,7 +52,7 @@ python3 install.py
 ```
 
 ## Shortcuts
-The **Leader key** is a way of extending the power of VIM's shortcuts by using sequences of keys to perform a command. The default leader key is **backslash**.
+The **Leader key** is a way of extending the power of VIM's shortcuts by using sequences of keys to perform a command. The default leader key is **backslash** or **Ctrl+[**.
 
 | Key | Description |
 | --- | --- |
