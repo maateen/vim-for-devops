@@ -123,8 +123,4 @@ if has('gui_running')
 endif
 
 " Shortcut
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
 noremap <silent> <F5> :!clear;python3 %<CR>
