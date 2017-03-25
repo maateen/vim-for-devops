@@ -23,13 +23,14 @@ syntax enable
 set encoding=utf-8
 set ruler
 set tabstop=4
-set noexpandtab
+set shiftwidth=4
+set expandtab
+retab
 set textwidth=79
 set autoindent
 set smartindent
 set fileformat=unix
 set backspace=indent,eol,start
-retab
 
 " Do not keep a backup file, use versions instead
 if has("vms")
