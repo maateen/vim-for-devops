@@ -124,4 +124,4 @@ endif
 
 " Shortcut
 noremap <silent> <F5> :!clear;python3 %<CR>
-noremap <silent> <F5> :!clear;autopep8 --in-place --aggressive --aggressive %<CR>
+noremap <silent> <F6> :!clear;autopep8 --in-place --aggressive --aggressive %<CR>
