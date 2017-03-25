@@ -56,7 +56,8 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 
 | Key | Description |
 | --- | --- |
-| F5 | Run Python3 Scripts |
+| F5 | Run Python3 Script |
+| F6 | Format Script with autopep8 |
 
 # Roadmap
 
