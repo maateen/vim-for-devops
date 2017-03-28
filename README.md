@@ -48,6 +48,9 @@ Let's compile the YouCompleteMe for autocompletion.
 cd ~/.vim/plugged/YouCompleteMe/
 ```
 ```
+git submodule update --init --recursive
+```
+```
 python3 install.py
 ```
 
