@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'rakr/vim-one'
 Plug 'airblade/vim-gitgutter'
 Plug 'hdima/python-syntax'
 Plug 'itchyny/lightline.vim'
@@ -84,9 +85,19 @@ if has('gui_running')
     set lines=999 columns=999
 endif
 
+"----------True color support----------"
+if (empty($TMUX))
+  if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+
 "----------Plugins Configs----------"
 " Airline configs
-let g:airline_theme='onedark'
+let g:airline_theme='one'
 let g:airline#extensions#tabline#enabled = 1
 
 " GitGutter configs
@@ -95,7 +106,8 @@ let g:gitgutter_max_signs = 500
 " Syntax configs
 set t_CO=256
 set background=dark
-colorscheme onedark
+let g:one_allow_italics = 1
+colorscheme one
 set number
 set laststatus=2
 let python_highlight_all = 1
