@@ -1,6 +1,6 @@
 # Vim for Python
 
-This project has been started to sync my minimal `.vimrc` file into the cloud. Initially, writing Python code was only in focus. But now I am using it as a generalized lightweght editor. I am using it for day-to-day Bash, Python, Go programming and writing Dockerfiles. You can follow this at your own risk.
+This project has been started to sync my minimal `.vimrc` file into the cloud. Initially, writing Python code was only in focus. But now I am using vim as a generalized lightweight editor. I am using it for day-to-day Bash, Python, Go programming and writing Dockerfiles, Ansible Playbooks, Terraform Codes. You can follow this at your own risk.
 
 # Usage
 
@@ -8,7 +8,7 @@ Let me suppose that you have installed all dependencies already.
 
 ## Install
 
-You should always use the latest Vim. For Ubuntu, open terminal and play these commands to install them.
+You should always use the latest Vim. For Ubuntu, open a terminal and play these commands to install them.
 
 ```
 sudo add-apt-repository ppa:jonathonf/vim -y
