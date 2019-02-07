@@ -67,16 +67,6 @@ else
     set wildignore+=.git\*,.hg\*,.svn\*
 endif
 
-" Do not keep a backup file, use versions instead
-if has("vms")
-    set nobackup
-else
-    set backup
-endif
-set history=50
-set showcmd
-set incsearch
-
 " Automatically source the Vimrc file on save.
 augroup autosourcing
 	autocmd!
