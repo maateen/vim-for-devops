@@ -3,7 +3,6 @@
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
-Plug 'tpope/vim-sensible'
 Plug 'lifepillar/vim-solarized8'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
@@ -35,19 +34,27 @@ colorscheme solarized8
 
 "----------Basic configs----------"
 retab
+filetype plugin indent on
+syntax on
 set background=light
 set number
 set nocompatible
+set encoding=utf-8
+set ruler
 set showmatch
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autowriteall
+set autoindent
 set visualbell
 set smartindent
 set fileformat=unix
+set backspace=indent,eol,start
+set complete=.,w,b,u
 set hlsearch
+set incsearch
 " set textwidth=79
 
 let mapleader = ','
