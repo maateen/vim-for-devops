@@ -1,6 +1,6 @@
-# Vim for Python
+# awesome vimrc
 
-This project has been started to sync my minimal `.vimrc` file into the cloud. Initially, writing Python code was only in focus. But now I am using vim as a generalized lightweight editor. I am using it for day-to-day Bash, Python, Go programming and writing Dockerfiles, Ansible Playbooks, Terraform Codes. You can follow this at your own risk.
+I have started this awesome project to sync my minimal `.vimrc` file into GitHub. Initially, writing Python code was only in focus. But now I am using vim as a generalized lightweight editor at my day-to-day DevOps works. I am using it for Bash/Python/Golang programming and writing Dockerfiles, Ansible Playbooks, Terraform Codes.
 
 # Usage
 
@@ -8,33 +8,44 @@ Let me suppose that you have installed all dependencies already.
 
 ## Install
 
-You should always use the latest Vim. For Ubuntu, open a terminal and play these commands to install them.
+### MacOSX
 
+Please, open a terminal and play this command to install the latest vim.
+
+```bash
+$ brew install vim
 ```
-sudo add-apt-repository ppa:jonathonf/vim -y
+
+### Ubuntu
+
+Please, open a terminal and play these commands to install the latest vim.
+
+```bash
+$ sudo add-apt-repository ppa:jonathonf/vim -y
 ```
+```bash
+$ sudo apt update
 ```
-sudo apt update
-```
-```
-sudo apt install vim -y
+```bash
+$ sudo apt install vim -y
 ```
 
 ## Set up
 
 Play these commands on Terminal to set up Vim.
 
+```bash
+$ git clone git@github.com:maateen/awesome-vimrc.git
 ```
-curl "https://raw.githubusercontent.com/maateen/vim-for-python/master/.vimrc" > ~/.vimrc
+```bash
+$ cd awesome-vimrc
 ```
-```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-```
-vim +PlugInstall +qall
+```bash
+$ bash install.sh
 ```
 
 ## Shortcuts
+
 The **Leader key** is a way of extending the power of VIM's shortcuts by using sequences of keys to perform a command. The default leader key is **comma**.
 
 | Key | Description |

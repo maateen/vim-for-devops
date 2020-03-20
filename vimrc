@@ -3,7 +3,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
-Plug 'rakr/vim-one'
+Plug 'lifepillar/vim-solarized8'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -15,7 +15,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'docker' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
-Plug 'lepture/vim-jinja', { 'for': 'jinja'}
 
 " Initialize plugin system
 call plug#end()
@@ -30,12 +29,14 @@ if (empty($TMUX))
   endif
 endif
 
+"----------Theme-----------"
+colorscheme solarized8
+
 "----------Basic configs----------"
 retab
 filetype plugin indent on
 syntax on
-colorscheme one
-set background=dark
+set background=light
 set number
 set nocompatible
 set encoding=utf-8
