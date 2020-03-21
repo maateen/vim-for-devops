@@ -50,8 +50,9 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 
 | Key | Description |
 | --- | --- |
-| `,g`| Enable Git Gutter |
-| `,\`| Toggle Nerd Tree |
+| `,f` | Toggle Fullscreen mode |
+| `,g` | Enable Git Gutter |
+| `,\` | Toggle Nerd Tree |
 
 ## Plugins
 
@@ -61,6 +62,7 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 | junegunn/vim-easy-align | | | |
 | tpope/vim-surround | | | |
 | airblade/vim-gitgutter | :white_check_mark: | GitGutterEnable | |
+| junegunn/goyo.vim | :white_check_mark: | Goyo | |
 | preservim/nerdtree | :white_check_mark: | NERDTreeToggle | |
 | ekalinin/Dockerfile.vim | :white_check_mark: | | docker |
 | fatih/vim-go | :white_check_mark: | | go |

@@ -13,7 +13,9 @@ Plug 'tpope/vim-surround'
 
 " On-demand loading
 Plug 'airblade/vim-gitgutter', { 'on':  'GitGutterEnable' }
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'docker' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'plasticboy/vim-markdown', { 'for': ['markdown', 'md'] }
@@ -79,9 +81,15 @@ augroup autosourcing
 augroup END
 
 "----------Plugins Configs----------"
+let g:goyo_width = '100%'
+let g:goyo_height = '100%'
 
+"----------Shortcuts----------"
 "make GitGutter easier to toggle
 nmap <Leader>g :GitGutterEnable<cr>
+
+"Toggle Fullscreen mode
+nmap <Leader>f : Goyo<cr>
 
 "make NERDTree easier to toggle
 nmap <Leader><Bslash> :NERDTreeToggle<cr>
