@@ -46,11 +46,26 @@ $ bash install.sh
 
 ## Shortcuts
 
-The **Leader key** is a way of extending the power of VIM's shortcuts by using sequences of keys to perform a command. The default leader key is **comma**.
+The **Leader key** is a way of extending the power of VIM's shortcuts by using sequences of keys to perform a command. The default leader key is **comma** sign.
 
 | Key | Description |
 | --- | --- |
+| `,g`| Enable Git Gutter |
 | `,\`| Toggle Nerd Tree |
+
+## Plugins
+
+| Name | Lazy Loading | On | For |
+| --- | --- | --- | --- |
+| lifepillar/vim-solarized8 | [ ] | [ ] | [ ] |
+| junegunn/vim-easy-align | [ ] | [ ] | [ ] |
+| tpope/vim-surround | [ ] | [ ] | [ ] |
+| airblade/vim-gitgutter | [x] | GitGutterEnable | [ ] |
+| preservim/nerdtree | [x] | NERDTreeToggle | [ ] |
+| ekalinin/Dockerfile.vim | [x] | [ ] | docker |
+| plasticboy/vim-markdown | [x] | [ ] | markdown |
+| chr4/nginx.vim | [x] | [ ] | nginx |
+| stephpy/vim-yaml | [x] | [ ] | yaml |
 
 # Roadmap
 

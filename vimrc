@@ -9,12 +9,15 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'junegunn/vim-easy-align'
 
 " Insert or delete brackets, parens, quotes in pair
-Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'airblade/vim-gitgutter', { 'on':  'GitGutterEnable' }
+Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'docker' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
+Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
 
 " Initialize plugin system
 call plug#end()
@@ -75,6 +78,9 @@ augroup autosourcing
 augroup END
 
 "----------Plugins Configs----------"
+
+"make GitGutter easier to toggle
+nmap <Leader>g :GitGutterEnable<cr>
 
 "make NERDTree easier to toggle
 nmap <Leader><Bslash> :NERDTreeToggle<cr>
