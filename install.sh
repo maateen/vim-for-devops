@@ -13,6 +13,11 @@ if $(hash vim); then
     fi
     ln -fFs $(pwd)/vimrc ~/.vimrc
     vim +PlugUpgrade +PlugClean +PlugInstall +PlugUpdate +qall
+
+    if $(hash go); then
+        vim ~/.vim.go +GoInstallBinaries +GoUpdateBinaries +qall
+    fi
+
 else
     echo "Oops! We could not find vim on your system."
 fi

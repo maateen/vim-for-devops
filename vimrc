@@ -15,9 +15,10 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter', { 'on':  'GitGutterEnable' }
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'docker' }
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'plasticboy/vim-markdown', { 'for': ['markdown', 'md'] }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
-Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
+Plug 'stephpy/vim-yaml', { 'for': ['yaml', 'yml'] }
 
 " Initialize plugin system
 call plug#end()

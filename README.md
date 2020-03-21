@@ -63,6 +63,7 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 | airblade/vim-gitgutter | [x] | GitGutterEnable | [ ] |
 | preservim/nerdtree | [x] | NERDTreeToggle | [ ] |
 | ekalinin/Dockerfile.vim | [x] | [ ] | docker |
+| fatih/vim-go | [x] | [ ] | go |
 | plasticboy/vim-markdown | [x] | [ ] | markdown |
 | chr4/nginx.vim | [x] | [ ] | nginx |
 | stephpy/vim-yaml | [x] | [ ] | yaml |
