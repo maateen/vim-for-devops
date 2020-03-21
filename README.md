@@ -57,16 +57,16 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 
 | Name | Lazy Loading | On | For |
 | --- | --- | --- | --- |
-| lifepillar/vim-solarized8 | [ ] | [ ] | [ ] |
-| junegunn/vim-easy-align | [ ] | [ ] | [ ] |
-| tpope/vim-surround | [ ] | [ ] | [ ] |
-| airblade/vim-gitgutter | [x] | GitGutterEnable | [ ] |
-| preservim/nerdtree | [x] | NERDTreeToggle | [ ] |
-| ekalinin/Dockerfile.vim | [x] | [ ] | docker |
-| fatih/vim-go | [x] | [ ] | go |
-| plasticboy/vim-markdown | [x] | [ ] | markdown |
-| chr4/nginx.vim | [x] | [ ] | nginx |
-| stephpy/vim-yaml | [x] | [ ] | yaml |
+| lifepillar/vim-solarized8 | | | |
+| junegunn/vim-easy-align | | | |
+| tpope/vim-surround | | | |
+| airblade/vim-gitgutter | :white_check_mark: | GitGutterEnable | |
+| preservim/nerdtree | :white_check_mark: | NERDTreeToggle | |
+| ekalinin/Dockerfile.vim | :white_check_mark: | | docker |
+| fatih/vim-go | :white_check_mark: | | go |
+| plasticboy/vim-markdown | :white_check_mark: | | markdown |
+| chr4/nginx.vim | :white_check_mark: | | nginx |
+| stephpy/vim-yaml | :white_check_mark: | | yaml |
 
 # Roadmap
 
