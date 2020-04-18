@@ -20,6 +20,7 @@ Plug 'ekalinin/Dockerfile.vim', { 'for': 'docker' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'plasticboy/vim-markdown', { 'for': ['markdown', 'md'] }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
+Plug 'hashivim/vim-terraform', { 'for': ['terraform', 'tf'] }
 Plug 'stephpy/vim-yaml', { 'for': ['yaml', 'yml'] }
 
 " Initialize plugin system
