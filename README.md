@@ -1,12 +1,8 @@
-# awesome vimrc
+# VIM for DevOps
 
-I have started this awesome project to sync my minimal `.vimrc` file into GitHub. Initially, writing Python code was only in focus. But now I am using vim as a generalized lightweight editor at my day-to-day DevOps works. I am using it for Bash/Python/Golang programming and writing Dockerfiles, Ansible Playbooks, Terraform Codes.
+I am a DevOps Engineer and using VIM as a generalized lightweight editor at my day-to-day DevOps works. I am using it for Bash/Python/Golang programming and writing Dockerfiles, Ansible Playbooks, Terraform Codes and Kubernetes manifests.
 
-# Usage
-
-Let me suppose that you have installed all dependencies already.
-
-## Install
+## Install VIM
 
 ### MacOSX
 
@@ -30,9 +26,9 @@ $ sudo apt update
 $ sudo apt install vim -y
 ```
 
-## Set up
+## Set Up VIM for DevOps
 
-Play these commands on Terminal to set up Vim.
+Play these commands on Terminal to set up Vim for DevOps.
 
 ```bash
 $ git clone git@github.com:maateen/awesome-vimrc.git
@@ -68,8 +64,7 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 | fatih/vim-go | :white_check_mark: | | go |
 | plasticboy/vim-markdown | :white_check_mark: | | markdown |
 | chr4/nginx.vim | :white_check_mark: | | nginx |
+| hashivim/vim-terraform | :white_check_mark: | | terraform |
 | stephpy/vim-yaml | :white_check_mark: | | yaml |
 
-# Roadmap
-
-I can't remember. :(
+Made with :heart: for DevOps Engineers by DevOps Engineer
