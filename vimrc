@@ -21,6 +21,7 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'plasticboy/vim-markdown', { 'for': ['markdown', 'md'] }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
 Plug 'hashivim/vim-terraform', { 'for': ['terraform', 'tf'] }
+Plug 'hashivim/vim-vagrant', { 'for': ['vagrant', 'Vagrantfile'] }
 Plug 'stephpy/vim-yaml', { 'for': ['yaml', 'yml'] }
 
 " Initialize plugin system
