@@ -65,6 +65,7 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 | plasticboy/vim-markdown | :white_check_mark: | | markdown |
 | chr4/nginx.vim | :white_check_mark: | | nginx |
 | hashivim/vim-terraform | :white_check_mark: | | terraform |
+| hashivim/vim-vagrant | :white_check_mark: | | vagrant |
 | stephpy/vim-yaml | :white_check_mark: | | yaml |
 
 Made with :heart: for DevOps Engineers by DevOps Engineer
