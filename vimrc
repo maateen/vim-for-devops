@@ -11,6 +11,9 @@ Plug 'junegunn/vim-easy-align'
 " Insert or delete brackets, parens, quotes in pair
 Plug 'tpope/vim-surround'
 
+" Comment smartly
+Plug 'preservim/nerdcommenter'
+
 " On-demand loading
 Plug 'airblade/vim-gitgutter', { 'on':  'GitGutterEnable' }
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }

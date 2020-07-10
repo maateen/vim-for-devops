@@ -1,6 +1,6 @@
 # VIM for DevOps
 
-I am a DevOps Engineer and using VIM as a generalized lightweight editor at my day-to-day DevOps works. I am using it for Bash/Python/Golang programming and writing Dockerfiles, Ansible Playbooks, Terraform Codes and Kubernetes manifests.
+An awesome lightweight Vim for DevOps Engineers.
 
 ## Install VIM
 
@@ -40,23 +40,36 @@ $ cd awesome-vimrc
 $ bash install.sh
 ```
 
+## Supported Languages
+
+- Dockerfile
+- Golang
+- Markdown
+- Nginx
+- Terraform
+- Vagrant
+- YAML
+
 ## Shortcuts
 
-The **Leader key** is a way of extending the power of VIM's shortcuts by using sequences of keys to perform a command. The default leader key is **comma** sign.
+The **Leader key** is a way of extending the power of VIM's shortcuts by using sequences of keys to perform a command. The default leader key is **comma** (`,`) key.
 
 | Key | Description |
 | --- | --- |
 | `,f` | Toggle Fullscreen mode |
 | `,g` | Enable Git Gutter |
 | `,\` | Toggle Nerd Tree |
+| `,cc` | Comment out the current line or text selected in visual mode. |
+| `,cu` | Uncomments the selected line(s). [Read More](https://github.com/preservim/nerdcommenter#default-mappings) |
 
 ## Plugins
 
 | Name | Lazy Loading | On | For |
-| --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: |
 | lifepillar/vim-solarized8 | | | |
 | junegunn/vim-easy-align | | | |
 | tpope/vim-surround | | | |
+| preservim/nerdcommenter | | | |
 | airblade/vim-gitgutter | :white_check_mark: | GitGutterEnable | |
 | junegunn/goyo.vim | :white_check_mark: | Goyo | |
 | preservim/nerdtree | :white_check_mark: | NERDTreeToggle | |
