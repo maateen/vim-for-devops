@@ -1,7 +1,10 @@
-theme: jekyll-theme-minimal
+remote_theme: daviddarnes/alembic
+encoding: utf-8
+lang: en-US
 title: Vim for DevOps
 description: An awesome lightweight Vim for DevOps
 logo: https://www.vim.org/images/vim_editor.gif
-show_downloads: true
+repo: https://github.com/maateen/vim-for-devops
 plugins:
   - jemoji
+  - jekyll-remote-theme
