@@ -1,7 +1,14 @@
 theme: jekyll-theme-minimal
 title: Vim for DevOps
 description: An awesome lightweight Vim for DevOps
+url: https://vim-for-devops.maateen.me/
 logo: https://www.vim.org/images/vim_editor.gif
 show_downloads: true
 plugins:
   - jemoji
+  - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: https://repository-images.githubusercontent.com/77739984/f41fa080-6b5f-11ea-9b05-375ad4abcda3
