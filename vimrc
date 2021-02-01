@@ -89,6 +89,8 @@ augroup END
 let g:goyo_width = '100%'
 let g:goyo_height = '100%'
 let g:vim_markdown_folding_disabled = 1
+let g:terraform_align = 1
+let g:terraform_fmt_on_save = 1
 
 "----------Shortcuts----------"
 "make GitGutter easier to toggle
@@ -97,5 +99,6 @@ nmap <Leader>g :GitGutterEnable<cr>
 "Toggle Fullscreen mode
 nmap <Leader>f : Goyo<cr>
 
-"make NERDTree easier to toggle
+"make NERDTree easier
 nmap <Leader><Bslash> :NERDTreeToggle<cr>
+nmap <Leader>n :NERDTreeFocus<cr>

@@ -46,6 +46,7 @@ $ bash install.sh
 - Golang
 - Markdown
 - Nginx
+- Python3
 - Terraform
 - Vagrant
 - YAML
@@ -58,7 +59,8 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 | --- | --- |
 | `,f` | Toggle Fullscreen mode |
 | `,g` | Enable Git Gutter |
-| `,\` | Toggle Nerd Tree |
+| `,\` | Toggle NerdTree |
+| `,n` | Move focus to NERDTree window |
 | `,cc` | Comment out the current line or text selected in visual mode. |
 | `,cu` | Uncomments the selected line(s). [Read More](https://github.com/preservim/nerdcommenter#default-mappings) |
 
