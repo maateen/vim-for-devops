@@ -15,17 +15,18 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
 
 " On-demand loading
-Plug 'airblade/vim-gitgutter', { 'on':  'GitGutterEnable' }
-Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
-Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
-Plug 'ekalinin/Dockerfile.vim', { 'for': 'docker' }
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'plasticboy/vim-markdown', { 'for': ['markdown', 'md'] }
-Plug 'chr4/nginx.vim', { 'for': 'nginx' }
-Plug 'hashivim/vim-terraform', { 'for': ['terraform', 'tf'] }
-Plug 'hashivim/vim-vagrant', { 'for': ['vagrant', 'Vagrantfile'] }
-Plug 'stephpy/vim-yaml', { 'for': ['yaml', 'yml'] }
+Plug 'airblade/vim-gitgutter', {'on':'GitGutterEnable'}
+Plug 'junegunn/goyo.vim', {'on':'Goyo'}
+Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
+Plug 'xuyuanp/nerdtree-git-plugin', {'on':'NERDTreeToggle'}
+Plug 'ekalinin/Dockerfile.vim', {'for':'docker'}
+Plug 'fatih/vim-go', {'for':'go'}
+Plug 'plasticboy/vim-markdown', {'for':['markdown', 'md']}
+Plug 'chr4/nginx.vim', {'for':'nginx'}
+Plug 'hashivim/vim-terraform', {'for':['terraform', 'tf']}
+Plug 'cespare/vim-toml', {'for':['toml']}
+Plug 'hashivim/vim-vagrant', {'for':['vagrant', 'Vagrantfile']}
+Plug 'stephpy/vim-yaml', {'for':['yaml', 'yml']}
 
 " Initialize plugin system
 call plug#end()
