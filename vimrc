@@ -46,11 +46,14 @@ colorscheme solarized8
 
 "----------Basic configs----------"
 retab
-filetype plugin indent on
 syntax on
+filetype on
+filetype plugin indent on
 set background=light
 set number
+set nobackup
 set nocompatible
+set cursorline
 set encoding=utf-8
 set ruler
 set showmatch
@@ -67,9 +70,13 @@ set backspace=indent,eol,start
 set complete=.,w,b,u
 set hlsearch
 set incsearch
-" set textwidth=79
 
-let mapleader = ','
+"----------Status Line--------------"
+set statusline=
+set statusline+=\ %.20F\ %M\ %R
+set statusline+=%=
+set statusline+=\ row:\ %-4l\ col:\ %-4c\ percent:\ %p%%
+set laststatus=2
 
 "----------Special Configs----------"
 " Ignore compiled files
@@ -94,7 +101,9 @@ let g:terraform_align = 1
 let g:terraform_fmt_on_save = 1
 
 "----------Shortcuts----------"
-"make GitGutter easier to toggle
+let mapleader = ','
+
+" make GitGutter easier to toggle
 nmap <Leader>g :GitGutterEnable<cr>
 
 "Toggle Fullscreen mode
