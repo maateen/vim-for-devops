@@ -73,9 +73,9 @@ set incsearch
 
 "----------Status Line--------------"
 set statusline=
-set statusline+=\ %.20F\ %M\ %R
+set statusline+=\ %Y\ %F\ %M\ %R
 set statusline+=%=
-set statusline+=\ row:\ %-4l\ col:\ %-4c\ percent:\ %p%%
+set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
 set laststatus=2
 
 "----------Special Configs----------"
