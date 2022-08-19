@@ -8,7 +8,7 @@ An awesome lightweight Vim for DevOps Engineers.
 
 Please, open a terminal and play this command to install the latest vim.
 
-```bash
+```
 $ brew install vim
 ```
 
@@ -16,27 +16,21 @@ $ brew install vim
 
 Please, open a terminal and play these commands to install the latest vim.
 
-```bash
-$ sudo add-apt-repository ppa:jonathonf/vim -y
 ```
-```bash
-$ sudo apt update
-```
-```bash
-$ sudo apt install vim -y
+$ sudo apt update && sudo apt install vim -y
 ```
 
 ## Set Up VIM for DevOps
 
 Play these commands on Terminal to set up Vim for DevOps.
 
-```bash
+```
 $ git clone git@github.com:maateen/awesome-vimrc.git
 ```
-```bash
+```
 $ cd awesome-vimrc
 ```
-```bash
+```
 $ bash install.sh
 ```
 
@@ -44,6 +38,7 @@ $ bash install.sh
 
 - Dockerfile
 - Golang
+- HCL
 - Markdown
 - Nginx
 - Python3
@@ -76,6 +71,8 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 | [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) | :white_check_mark: | GitGutterEnable | |
 | [junegunn/goyo.vim](https://github.com/junegunn/goyo.vim) | :white_check_mark: | Goyo | |
 | [preservim/nerdtree](https://github.com/preservim/nerdtree) | :white_check_mark: | NERDTreeToggle | |
+| [xuyuanp/nerdtree-git-plugin](https://github.com/xuyuanp/nerdtree-git-plugin) | :white_check_mark: | NERDTreeToggle | |
+| [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) | :white_check_mark: | NERDTreeToggle | |
 | [ekalinin/Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim) | :white_check_mark: | | docker |
 | [fatih/vim-go](https://github.com/fatih/vim-go) | :white_check_mark: | | go |
 | [plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown) | :white_check_mark: | | markdown |
@@ -84,5 +81,6 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 | [cespare/vim-toml](https://github.com/cespare/vim-toml) | :white_check_mark: | | toml |
 | [hashivim/vim-vagrant](https://github.com/hashivim/vim-vagrant) | :white_check_mark: | | vagrant |
 | [stephpy/vim-yaml](https://github.com/stephpy/vim-yaml) | :white_check_mark: | | yaml |
+| [jvirtanen/vim-hcl](https://github.com/jvirtanen/vim-hcl) | :white_check_mark: | | hcl |
 
 <br>Made with :heart: for DevOps Engineers by DevOps Engineer
