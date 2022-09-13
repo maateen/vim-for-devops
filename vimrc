@@ -5,11 +5,8 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 Plug 'lifepillar/vim-solarized8'
 
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
-
 " Insert or delete brackets, parens, quotes in pair
-Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 
 " Comment smartly
 Plug 'preservim/nerdcommenter'
@@ -17,31 +14,20 @@ Plug 'preservim/nerdcommenter'
 " On-demand loading
 Plug 'airblade/vim-gitgutter', {'on':'GitGutterEnable'}
 Plug 'junegunn/goyo.vim', {'on':'Goyo'}
-Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
-Plug 'xuyuanp/nerdtree-git-plugin', {'on':'NERDTreeToggle'}
-Plug 'ryanoasis/vim-devicons', {'on':'NERDTreeToggle'}
-Plug 'ekalinin/Dockerfile.vim', {'for':'docker'}
+Plug 'preservim/nerdtree', {'on':['NERDTree','NERDTreeToggle','NERDTreeFind','NERDTreeFocus']}
+Plug 'xuyuanp/nerdtree-git-plugin', {'on':['NERDTree','NERDTreeToggle','NERDTreeFind','NERDTreeFocus']}
+Plug 'ryanoasis/vim-devicons', {'on':['NERDTree','NERDTreeToggle','NERDTreeFind','NERDTreeFocus']}
+Plug 'ekalinin/Dockerfile.vim', {'for':'dockerfile'}
 Plug 'fatih/vim-go', {'for':'go'}
-Plug 'plasticboy/vim-markdown', {'for':['markdown', 'md']}
+Plug 'plasticboy/vim-markdown', {'for':['markdown','md']}
 Plug 'chr4/nginx.vim', {'for':'nginx'}
-Plug 'hashivim/vim-terraform', {'for':['terraform', 'tf']}
-Plug 'cespare/vim-toml', {'for':['toml']}
-Plug 'hashivim/vim-vagrant', {'for':['vagrant', 'Vagrantfile']}
+Plug 'hashivim/vim-terraform', {'for':['hcl','terraform','tf']}
+Plug 'cespare/vim-toml', {'for':'toml'}
+Plug 'hashivim/vim-vagrant', {'for':['vagrant','Vagrantfile']}
 Plug 'stephpy/vim-yaml', {'for':['yaml', 'yml']}
-Plug 'jvirtanen/vim-hcl', {'for':'hcl'}
 
 " Initialize plugin system
 call plug#end()
-
-" True color support
-if (empty($TMUX))
-  if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
 
 "----------Theme-----------"
 colorscheme solarized8
@@ -70,6 +56,7 @@ set smartindent
 set fileformat=unix
 set backspace=indent,eol,start
 set complete=.,w,b,u
+set updatetime=100
 set hlsearch
 set incsearch
 
@@ -90,24 +77,34 @@ augroup END
 let g:goyo_width='100%'
 let g:goyo_height='100%'
 let g:vim_markdown_folding_disabled=1
+let g:hcl_align=1
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
-let g:NERDTreeShowHidden=1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeShowHidden=0
+let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeRespectWildIgnore=1
 let g:NERDTreeIgnore=['\.DS_Store$','\.git$','\.devcontainer$']
 
 "----------Shortcuts----------"
 let mapleader = ','
 
-" make GitGutter easier to toggle
-nmap <Leader>g :GitGutterEnable<cr>
+" Toggle IDE mode in VIM
+nmap <C-i> :GitGutterEnable<cr>:NERDTreeFind<cr>
 
-"Toggle Fullscreen mode
-nmap <Leader>f : Goyo<cr>
+" Toggle GitGutter
+nmap <C-g> :GitGutterEnable<cr>
 
-"make NERDTree easier
-nmap <Leader><Bslash> :NERDTreeToggle<cr>
-nmap <Leader>n :NERDTreeFocus<cr>
+" Toggle Fullscreen mode
+nmap <C-f> :Goyo<cr>
+
+" Toggle Terminal below current tab
+nmap <C-d> :below terminal<cr>
+
+" make NERDTree easier
+nmap <C-t> :NERDTreeToggle<cr>
+nmap <C-n> :NERDTreeFind<cr>
 
 " Start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
