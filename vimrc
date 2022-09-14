@@ -26,7 +26,6 @@ Plug 'cespare/vim-toml', {'for':'toml'}
 Plug 'hashivim/vim-vagrant', {'for':['vagrant','Vagrantfile']}
 Plug 'stephpy/vim-yaml', {'for':['yaml', 'yml']}
 
-" Initialize plugin system
 call plug#end()
 
 "----------Theme-----------"
@@ -42,7 +41,7 @@ set number
 set nobackup
 set nocompatible
 set cursorline
-set encoding=utf-8
+set encoding=UTF-8
 set ruler
 set showmatch
 set tabstop=4
@@ -67,12 +66,6 @@ set statusline+=%=
 set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
 set laststatus=2
 
-" Automatically source the Vimrc file on save.
-augroup autosourcing
-    autocmd!
-    autocmd BufWritePost .vimrc source %
-augroup END
-
 "----------Plugins Configs----------"
 let g:goyo_width='100%'
 let g:goyo_height='100%'
@@ -80,12 +73,18 @@ let g:vim_markdown_folding_disabled=1
 let g:hcl_align=1
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeDirArrows = 1
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeDirArrows=0
 let g:NERDTreeShowHidden=0
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeRespectWildIgnore=1
 let g:NERDTreeIgnore=['\.DS_Store$','\.git$','\.devcontainer$']
+let g:WebDevIconsOS='Darwin'
+let g:webdevicons_enable=1
+let g:webdevicons_enable_nerdtree=1
+let g:WebDevIconsUnicodeDecorateFileNodes=1
+let g:webdevicons_conceal_nerdtree_brackets=1
+let g:WebDevIconsUnicodeDecorateFolderNodes=1
 
 "----------Shortcuts----------"
 let mapleader = ','
@@ -120,3 +119,9 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Automatically source the Vimrc file on save.
+augroup autosourcing
+    autocmd!
+    autocmd BufWritePost .vimrc source %
+augroup END
