@@ -66,7 +66,7 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 
 | Name | Lazy Loading | On | For |
 | :---: | :---: | :---: | :---: |
-| [lifepillar/vim-solarized8](https://github.com/lifepillar/vim-solarized8) | | | |
+| [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim) | | | |
 | [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs) | | | |
 | [preservim/nerdcommenter](https://github.com/preservim/nerdcommenter) | | | |
 | [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) | :white_check_mark: | GitGutterEnable | |

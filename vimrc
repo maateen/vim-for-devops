@@ -3,7 +3,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
-Plug 'lifepillar/vim-solarized8'
+Plug 'joshdick/onedark.vim'
 
 " Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
@@ -29,15 +29,18 @@ Plug 'stephpy/vim-yaml', {'for':['yaml', 'yml']}
 call plug#end()
 
 "----------Theme-----------"
-colorscheme solarized8
+set termguicolors
+let g:onedark_termcolors=256
+let g:onedark_hide_endofbuffer=1
+let g:onedark_terminal_italics=1
+colorscheme onedark
 
 "----------Basic configs----------"
 retab
 syntax on
 filetype on
 filetype plugin indent on
-set t_Co=16
-set background=light
+set background=dark
 set number
 set nobackup
 set nocompatible
