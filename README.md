@@ -69,11 +69,12 @@ The **Leader key** is a way of extending the power of VIM's shortcuts by using s
 | [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim) | | | |
 | [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs) | | | |
 | [preservim/nerdcommenter](https://github.com/preservim/nerdcommenter) | | | |
-| [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) | :white_check_mark: | GitGutterEnable | |
+| [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) | :white_check_mark: | GitGutter | |
 | [junegunn/goyo.vim](https://github.com/junegunn/goyo.vim) | :white_check_mark: | Goyo | |
-| [preservim/nerdtree](https://github.com/preservim/nerdtree) | :white_check_mark: | NERDTree, NERDTreeToggle, NERDTreeFind, NERDTreeFocus | |
-| [xuyuanp/nerdtree-git-plugin](https://github.com/xuyuanp/nerdtree-git-plugin) | :white_check_mark: | NERDTree, NERDTreeToggle, NERDTreeFind, NERDTreeFocus | |
-| [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) | :white_check_mark: | NERDTree, NERDTreeToggle, NERDTreeFind, NERDTreeFocus | |
+| [preservim/nerdtree](https://github.com/preservim/nerdtree) | :white_check_mark: | NERDTree | |
+| [xuyuanp/nerdtree-git-plugin](https://github.com/xuyuanp/nerdtree-git-plugin) | :white_check_mark: | NERDTree | |
+| [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) | :white_check_mark: | NERDTree | |
+| [tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/ryanoasis/vim-devicons) | :white_check_mark: | NERDTree | |
 | [ekalinin/Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim) | :white_check_mark: | | dockerfile |
 | [fatih/vim-go](https://github.com/fatih/vim-go) | :white_check_mark: | | go |
 | [plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown) | :white_check_mark: | | markdown |

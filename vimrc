@@ -17,6 +17,7 @@ Plug 'junegunn/goyo.vim', {'on':'Goyo'}
 Plug 'preservim/nerdtree', {'on':['NERDTree','NERDTreeToggle','NERDTreeFind','NERDTreeFocus']}
 Plug 'xuyuanp/nerdtree-git-plugin', {'on':['NERDTree','NERDTreeToggle','NERDTreeFind','NERDTreeFocus']}
 Plug 'ryanoasis/vim-devicons', {'on':['NERDTree','NERDTreeToggle','NERDTreeFind','NERDTreeFocus']}
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', {'on':['NERDTree','NERDTreeToggle','NERDTreeFind','NERDTreeFocus']}
 Plug 'ekalinin/Dockerfile.vim', {'for':'dockerfile'}
 Plug 'fatih/vim-go', {'for':'go'}
 Plug 'plasticboy/vim-markdown', {'for':['markdown','md']}
@@ -82,7 +83,7 @@ let g:NERDTreeDirArrows=0
 let g:NERDTreeShowHidden=0
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeRespectWildIgnore=1
-let g:NERDTreeIgnore=['\.DS_Store$','\.git$','\.devcontainer$']
+let g:NERDTreeIgnore=['\.git$','\.svn$','\.hg$','\.DS_Store$','\.devcontainer$','\.vscode$','__pycache__$','\.terraform$','\.terraform.lock.hcl$','\.terragrunt-cache$','\.pyc$']
 let g:WebDevIconsOS='Darwin'
 let g:webdevicons_enable=1
 let g:webdevicons_enable_nerdtree=1
