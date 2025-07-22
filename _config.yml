@@ -1,14 +1,114 @@
+# Jekyll Configuration for VIM for DevOps
+# Site settings
+title: "VIM for DevOps"
+description: "A lightweight, optimized Vim configuration specifically designed for DevOps engineers with intelligent code completion, syntax highlighting, and essential tools for infrastructure management."
+url: "https://vim-for-devops.maateen.me"
+baseurl: ""
+
+# Repository information
+repository: "maateen/vim-for-devops"
+github_username: maateen
+
+# Author information
+author:
+  name: "Maksudur Rahman Maateen"
+  email: "maateen@outlook.com"
+  github: "maateen"
+  linkedin: "maateen"
+
+# Theme and appearance
 theme: jekyll-theme-minimal
-title: Vim for DevOps
-description: An awesome lightweight Vim for DevOps
-url: https://vim-for-devops.maateen.me/
-logo: https://www.vim.org/images/vim_editor.gif
+logo: "https://www.vim.org/images/vim_editor.gif"
 show_downloads: true
+color_scheme: auto
+
+# GitHub Pages specific
+github:
+  repository_url: "https://github.com/maateen/vim-for-devops"
+  repository_name: "vim-for-devops"
+  owner_name: "maateen"
+  owner_url: "https://github.com/maateen"
+  zip_url: "https://github.com/maateen/vim-for-devops/zipball/main"
+  tar_url: "https://github.com/maateen/vim-for-devops/tarball/main"
+
+# SEO and social
+lang: en-US
+og_image: "https://repository-images.githubusercontent.com/77739984/f41fa080-6b5f-11ea-9b05-375ad4abcda3"
+
+# Keywords for SEO
+keywords: 
+  - vim
+  - devops
+  - automation
+  - infrastructure
+  - configuration
+  - editor
+  - development
+  - tools
+  - docker
+  - kubernetes
+  - terraform
+  - ansible
+
+# Plugins
 plugins:
-  - jemoji
+  - jekyll-feed
+  - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jemoji
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Default values
 defaults:
   - scope:
       path: ""
+      type: "pages"
     values:
-      image: https://repository-images.githubusercontent.com/77739984/f41fa080-6b5f-11ea-9b05-375ad4abcda3
+      layout: "default"
+      image: "https://repository-images.githubusercontent.com/77739984/f41fa080-6b5f-11ea-9b05-375ad4abcda3"
+      author: "Maksudur Rahman Maateen"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .gitignore
+  - install.sh
+  - vimrc
+  - "*.md"
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections_dir: collections
+
+# Timezone
+timezone: UTC
+
+# Encoding
+encoding: utf-8
+
+# Liquid options
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
+
+# Sass configuration
+sass:
+  style: compressed
+  sass_dir: _sass

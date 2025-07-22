@@ -1,87 +1,199 @@
 # VIM for DevOps
 
-An awesome lightweight Vim for DevOps Engineers.
+A lightweight, optimized Vim configuration specifically designed for DevOps engineers with intelligent code completion, syntax highlighting, and essential tools for infrastructure management.
 
-## Install VIM
+## ✨ Features
 
-### MacOSX
+- **LSP Integration**: Advanced code completion via CoC.nvim
+- **DevOps Focused**: Built-in support for Docker, Kubernetes, Terraform, Ansible
+- **Code Quality**: Automatic linting and formatting with ALE
+- **Performance Optimized**: Lazy loading for faster startup
+- **Git Integration**: Seamless version control workflow
+- **Modern UI**: Clean interface with file icons and status line
 
-Please, open a terminal and play this command to install the latest vim.
+## 🚀 Quick Setup
 
-```
-$ brew install vim
-```
+### Prerequisites
 
-### Ubuntu
+Install Vim and required dependencies:
 
-Please, open a terminal and play these commands to install the latest vim.
-
-```
-$ sudo apt update && sudo apt install vim -y
-```
-
-## Set Up VIM for DevOps
-
-Play these commands on Terminal to set up Vim for DevOps.
-
-```
-$ git clone git@github.com:maateen/awesome-vimrc.git
-```
-```
-$ cd awesome-vimrc
-```
-```
-$ bash install.sh
+**macOS:**
+```bash
+brew install vim
 ```
 
-## Supported Languages
+**Ubuntu/Debian:**
+```bash
+sudo apt update && sudo apt install vim -y
+```
 
-- Dockerfile
-- Golang
-- HCL
-- Markdown
-- Nginx
-- Python3
-- Terraform
-- TOML
-- Vagrant
-- YAML
+### Installation
 
-## Shortcuts
+1. **Clone the repository:**
+```bash
+git clone https://github.com/maateen/vim-for-devops.git
+cd vim-for-devops
+```
 
-The **Leader key** is a way of extending the power of VIM's shortcuts by using sequences of keys to perform a command. The default leader key is **comma** (`,`) key.
+2. **Install the configuration:**
+```bash
+cp vimrc ~/.vimrc
+```
 
-| Key | Description |
-| --- | --- |
-| `Ctrl-i` | Toggle IDE mode in VIM |
-| `Ctrl-g` | Enable Git Gutter |
-| `Ctrl-f` | Toggle Fullscreen mode |
-| `Ctrl-t` | Toggle NerdTree |
-| `Ctrl-n` | Move focus to NERDTree window |
-| `Ctrl-d` | Toggle Terminal below current tab |
-| `,cc` | Comment out the current line or text selected in visual mode. |
-| `,cu` | Uncomments the selected line(s). [Read More](https://github.com/preservim/nerdcommenter#default-mappings) |
+3. **Install vim-plug (plugin manager):**
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
-## Plugins
+4. **Install plugins:**
+Open Vim and run:
+```vim
+:PlugInstall
+```
 
-| Name | Lazy Loading | On | For |
-| :---: | :---: | :---: | :---: |
-| [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim) | | | |
-| [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs) | | | |
-| [preservim/nerdcommenter](https://github.com/preservim/nerdcommenter) | | | |
-| [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) | :white_check_mark: | GitGutter | |
-| [junegunn/goyo.vim](https://github.com/junegunn/goyo.vim) | :white_check_mark: | Goyo | |
-| [preservim/nerdtree](https://github.com/preservim/nerdtree) | :white_check_mark: | NERDTree | |
-| [xuyuanp/nerdtree-git-plugin](https://github.com/xuyuanp/nerdtree-git-plugin) | :white_check_mark: | NERDTree | |
-| [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) | :white_check_mark: | NERDTree | |
-| [tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/ryanoasis/vim-devicons) | :white_check_mark: | NERDTree | |
-| [ekalinin/Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim) | :white_check_mark: | | dockerfile |
-| [fatih/vim-go](https://github.com/fatih/vim-go) | :white_check_mark: | | go |
-| [plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown) | :white_check_mark: | | markdown |
-| [chr4/nginx.vim](https://github.com/chr4/nginx.vim) | :white_check_mark: | | nginx |
-| [hashivim/vim-terraform](https://github.com/hashivim/vim-terraform) | :white_check_mark: | | hcl, terraform |
-| [cespare/vim-toml](https://github.com/cespare/vim-toml) | :white_check_mark: | | toml |
-| [hashivim/vim-vagrant](https://github.com/hashivim/vim-vagrant) | :white_check_mark: | | vagrant |
-| [stephpy/vim-yaml](https://github.com/stephpy/vim-yaml) | :white_check_mark: | | yaml |
+## 🛠 Supported Technologies
 
-<br>Made with :heart: for DevOps Engineers by DevOps Engineer
+| Technology | Features |
+|------------|----------|
+| **Docker** | Syntax highlighting, linting with hadolint |
+| **Kubernetes** | YAML support, Helm charts |
+| **Terraform** | HCL syntax, auto-formatting, tflint integration |
+| **Ansible** | Playbook syntax, ansible-lint support |
+| **Python** | Black formatting, mypy type checking |
+| **Go** | Full language support via vim-go |
+| **YAML/JSON** | Advanced parsing and validation |
+| **Shell Scripts** | Shellcheck integration |
+| **Nginx** | Configuration file syntax |
+| **Vagrant** | Vagrantfile support |
+
+## ⌨️ Key Mappings
+
+### Basic Operations
+| Key | Action |
+|-----|--------|
+| `Ctrl+s` | Save file |
+| `Ctrl+w` | Close buffer |
+| `Ctrl+z` | Undo |
+| `Ctrl+r` | Redo |
+
+### File Navigation
+| Key | Action |
+|-----|--------|
+| `Ctrl+t` | Toggle file explorer |
+| `Ctrl+e` | Find current file in explorer |
+
+### IDE Features
+| Key | Action |
+|-----|--------|
+| `Ctrl+i` | Enable IDE mode (Git gutter + file explorer) |
+| `Ctrl+g` | Toggle Git gutter |
+| `Ctrl+f` | Toggle distraction-free mode |
+| `Ctrl+d` | Open terminal below |
+
+### Code Intelligence (via CoC.nvim)
+| Key | Action |
+|-----|--------|
+| `gd` | Go to definition |
+| `gy` | Go to type definition |
+| `gi` | Go to implementation |
+| `gr` | Find references |
+| `K` | Show documentation |
+| `<leader>rn` | Rename symbol |
+| `<leader>ca` | Code actions |
+
+### Git Operations
+| Key | Action |
+|-----|--------|
+| `<leader>gs` | Git status |
+| `<leader>gd` | Git diff split |
+| `<leader>gl` | Git commit log |
+
+### Buffer/Tab Management
+| Key | Action |
+|-----|--------|
+| `<leader>t` | New tab |
+| `<leader>n` | Next buffer |
+| `<leader>p` | Previous buffer |
+
+### Quick Toggles
+| Key | Action |
+|-----|--------|
+| `<leader>i` | Toggle indent lines |
+
+### Comments
+| Key | Action |
+|-----|--------|
+| `,cc` | Comment line/selection |
+| `,cu` | Uncomment line/selection |
+
+*Leader key is comma (`,`)*
+
+## 🔌 Plugin Architecture
+
+### Theme & UI
+- **[onedark.vim](https://github.com/joshdick/onedark.vim)**: Modern dark theme
+- **[vim-airline](https://github.com/vim-airline/vim-airline)**: Enhanced status line
+- **[vim-devicons](https://github.com/ryanoasis/vim-devicons)**: File type icons
+- **[nerdtree](https://github.com/preservim/nerdtree)**: File explorer with Git integration
+- **[nerdtree-git-plugin](https://github.com/xuyuanp/nerdtree-git-plugin)**: Git integration for NERDTree
+- **[vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)**: Syntax highlighting for NERDTree
+
+### Code Intelligence
+- **[coc.nvim](https://github.com/neoclide/coc.nvim)**: Language Server Protocol support
+- **[ale](https://github.com/dense-analysis/ale)**: Asynchronous linting and fixing
+- **[auto-pairs](https://github.com/jiangmiao/auto-pairs)**: Smart bracket/quote pairing
+- **[nerdcommenter](https://github.com/preservim/nerdcommenter)**: Intelligent commenting
+
+### DevOps Tools
+- **[vim-fugitive](https://github.com/tpope/vim-fugitive)**: Git integration
+- **[vim-gitgutter](https://github.com/airblade/vim-gitgutter)**: Git change indicators
+- **[ansible-vim](https://github.com/pearofducks/ansible-vim)**: Ansible syntax support
+- **[vim-terraform](https://github.com/hashivim/vim-terraform)**: Terraform/HCL support
+- **[vim-kubernetes](https://github.com/andrewstuart/vim-kubernetes)**: Kubernetes YAML support
+- **[Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim)**: Docker syntax
+- **[vim-helm](https://github.com/towolf/vim-helm)**: Helm chart support
+
+### Language Support
+- **[vim-go](https://github.com/fatih/vim-go)**: Go development
+- **[vim-markdown](https://github.com/plasticboy/vim-markdown)**: Enhanced Markdown
+- **[JSON.vim](https://github.com/vim-scripts/JSON.vim)**: JSON syntax
+- **[vim-yaml](https://github.com/stephpy/vim-yaml)**: YAML enhancements
+- **[nginx.vim](https://github.com/chr4/nginx.vim)**: Nginx configuration
+- **[vim-toml](https://github.com/cespare/vim-toml)**: TOML support
+- **[vim-vagrant](https://github.com/hashivim/vim-vagrant)**: Vagrantfile support
+
+### Utilities
+- **[goyo.vim](https://github.com/junegunn/goyo.vim)**: Distraction-free writing
+- **[indentLine](https://github.com/Yggdroot/indentLine)**: Visual indent guides
+- **[trim.nvim](https://github.com/cappyzawa/trim.nvim)**: Automatic whitespace cleanup
+- **[webapi-vim](https://github.com/mattn/webapi-vim)**: Web API functionality for other plugins
+
+## 🎨 Customization
+
+The configuration is modular and well-documented. Key areas for customization:
+
+- **Theme**: Change `colorscheme onedark` in the theme section
+- **Key mappings**: Modify the "Key Mappings" section
+- **Plugin settings**: Adjust in the "Plugin Configs" section
+- **Linters/Formatters**: Update ALE configuration for your tools
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Plugins not loading**: Run `:PlugInstall` in Vim
+2. **CoC.nvim errors**: Install Node.js and run `:CocInstall` for language servers
+3. **Linting not working**: Ensure tools like `black`, `shellcheck`, `hadolint` are installed
+4. **Icons not showing**: Install a Nerd Font and configure your terminal
+
+### Performance
+
+The configuration uses lazy loading to maintain fast startup times. Plugins load only when needed:
+- File type specific plugins load for relevant files
+- UI plugins load on command
+- Heavy plugins are deferred until first use
+
+---
+
+**Made with ❤️ for DevOps Engineers**
