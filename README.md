@@ -1,75 +1,111 @@
 # VIM for DevOps
 
-A lightweight, optimized Vim configuration specifically designed for DevOps engineers with intelligent code completion, syntax highlighting, and essential tools for infrastructure management.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![Vim 8.1+](https://img.shields.io/badge/Vim-8.1%2B-019733.svg)](https://www.vim.org/)
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey.svg)](#requirements)
 
-## ✨ Features
+A lightweight, optimized Vim configuration for DevOps engineers: language server
+completion, linting and formatting on save, and first-class support for the file
+types you touch every day — Docker, Kubernetes, Terraform, Ansible, Helm, shell,
+Python and Go.
 
-- **LSP Integration**: Advanced code completion via CoC.nvim
-- **DevOps Focused**: Built-in support for Docker, Kubernetes, Terraform, Ansible
-- **Code Quality**: Automatic linting and formatting with ALE
-- **Performance Optimized**: Lazy loading for faster startup
-- **Git Integration**: Seamless version control workflow
-- **Modern UI**: Clean interface with file icons and status line
+![VIM for DevOps](https://repository-images.githubusercontent.com/77739984/f41fa080-6b5f-11ea-9b05-375ad4abcda3)
 
-## 🚀 Quick Setup
+## Features
 
-### Prerequisites
+- **Language server completion** through [CoC.nvim](https://github.com/neoclide/coc.nvim)
+- **Lint and format on save** through [ALE](https://github.com/dense-analysis/ale)
+- **DevOps file types** covered out of the box: Dockerfile, Kubernetes/Helm YAML,
+  Terraform/HCL, Ansible, Vagrant, Nginx, TOML, JSON and shell
+- **Lazy plugin loading** keyed on commands and file types to keep startup fast
+- **Git workflow** with [fugitive](https://github.com/tpope/vim-fugitive) and
+  [gitgutter](https://github.com/airblade/vim-gitgutter)
+- **Persistent undo**, sane search behaviour, and split/window defaults
+- **Idempotent installer** with backup, dry-run and uninstall support
 
-Install Vim and required dependencies:
+## Requirements
 
-**macOS:**
-```bash
-brew install vim
-```
+| Requirement | Why |
+|-------------|-----|
+| Vim **8.1+** with `+job` and `+timers` | CoC.nvim and ALE run jobs asynchronously |
+| `git`, `curl` (or `wget`) | Plugin download |
+| [Node.js](https://nodejs.org/) 16+ | CoC.nvim language servers |
+| A [Nerd Font](https://www.nerdfonts.com/) | File icons in NERDTree and the status line |
+| A true-color terminal | `termguicolors` and the onedark theme |
 
-**Ubuntu/Debian:**
-```bash
-sudo apt update && sudo apt install vim -y
-```
+## Installation
 
-### Installation
+### Scripted (recommended)
 
-1. **Clone the repository:**
 ```bash
 git clone https://github.com/maateen/vim-for-devops.git
 cd vim-for-devops
+./install.sh
 ```
 
-2. **Install the configuration:**
-```bash
-cp vimrc ~/.vimrc
-```
+The script backs up `~/.vimrc` and your existing Vim configuration, installs
+vim-plug and the plugins, installs vim-go binaries when Go is available, and
+reports which optional tools are missing.
 
-3. **Install vim-plug (plugin manager):**
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
+| Option | Description |
+|--------|-------------|
+| `-y`, `--yes` | Unattended install (assume yes) |
+| `-n`, `--dry-run` | Print every action without changing anything |
+| `-u`, `--uninstall` | Move the current config aside and restore the latest backup |
+| `-h`, `--help` | Show usage |
 
-4. **Install plugins:**
-Open Vim and run:
-```vim
-:PlugInstall
-```
+### Manual
 
-## 🛠 Supported Technologies
+1. Copy the configuration:
 
-| Technology | Features |
-|------------|----------|
-| **Docker** | Syntax highlighting, linting with hadolint |
-| **Kubernetes** | YAML support, Helm charts |
-| **Terraform** | HCL syntax, auto-formatting, tflint integration |
-| **Ansible** | Playbook syntax, ansible-lint support |
-| **Python** | Black formatting, mypy type checking |
-| **Go** | Full language support via vim-go |
-| **YAML/JSON** | Advanced parsing and validation |
-| **Shell Scripts** | Shellcheck integration |
-| **Nginx** | Configuration file syntax |
-| **Vagrant** | Vagrantfile support |
+   ```bash
+   cp vimrc ~/.vimrc
+   ```
 
-## ⌨️ Key Mappings
+2. Install [vim-plug](https://github.com/junegunn/vim-plug):
 
-### Basic Operations
+   ```bash
+   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+   ```
+
+3. Install the plugins from inside Vim:
+
+   ```vim
+   :PlugInstall
+   ```
+
+4. Install the language servers you need:
+
+   ```vim
+   :CocInstall coc-json coc-yaml coc-sh coc-go coc-pyright
+   ```
+
+   Run `:CocList marketplace` to browse extensions such as `coc-docker` or
+   `coc-ansible`.
+
+## Supported technologies
+
+| Technology | Provided by |
+|------------|-------------|
+| Docker | Dockerfile syntax, `hadolint` linting |
+| Kubernetes | YAML syntax, schema-aware `coc-yaml` |
+| Helm | Chart and template syntax |
+| Terraform / HCL | Syntax, alignment, `terraform fmt` on save, `tflint` |
+| Ansible | Playbook syntax, `ansible-lint` |
+| Vagrant | Vagrantfile file type |
+| Python | `black`/`isort` on save, `mypy`/`pylint` diagnostics |
+| Go | vim-go, `gofmt` on save, `gd`/`gr` through CoC |
+| YAML / JSON / TOML | Syntax, `yamllint`/`yamlfix`, `jq` |
+| Shell | `shellcheck`, `shfmt` on save |
+| Nginx | Directive and block syntax |
+
+## Key mappings
+
+Leader key is <kbd>,</kbd>.
+
+### Basic operations
+
 | Key | Action |
 |-----|--------|
 | `Ctrl+s` | Save file |
@@ -77,21 +113,24 @@ Open Vim and run:
 | `Ctrl+z` | Undo |
 | `Ctrl+r` | Redo |
 
-### File Navigation
+### File navigation
+
 | Key | Action |
 |-----|--------|
 | `Ctrl+t` | Toggle file explorer |
 | `Ctrl+e` | Find current file in explorer |
 
-### IDE Features
+### IDE features
+
 | Key | Action |
 |-----|--------|
 | `Ctrl+i` | Enable IDE mode (Git gutter + file explorer) |
-| `Ctrl+g` | Toggle Git gutter |
+| `Ctrl+g` | Enable Git gutter |
 | `Ctrl+f` | Toggle distraction-free mode |
 | `Ctrl+d` | Open terminal below |
 
-### Code Intelligence (via CoC.nvim)
+### Code intelligence (CoC)
+
 | Key | Action |
 |-----|--------|
 | `gd` | Go to definition |
@@ -99,101 +138,150 @@ Open Vim and run:
 | `gi` | Go to implementation |
 | `gr` | Find references |
 | `K` | Show documentation |
-| `<leader>rn` | Rename symbol |
-| `<leader>ca` | Code actions |
+| `,rn` | Rename symbol |
+| `,ca` | Code actions |
 
-### Git Operations
+### Git
+
 | Key | Action |
 |-----|--------|
-| `<leader>gs` | Git status |
-| `<leader>gd` | Git diff split |
-| `<leader>gl` | Git commit log |
+| `,gs` | `:Git` status |
+| `,gd` | Side-by-side diff |
+| `,gl` | Commit log |
 
-### Buffer/Tab Management
+### Buffers and tabs
+
 | Key | Action |
 |-----|--------|
-| `<leader>t` | New tab |
-| `<leader>n` | Next buffer |
-| `<leader>p` | Previous buffer |
+| `,t` | New tab |
+| `,n` | Next buffer |
+| `,p` | Previous buffer |
 
-### Quick Toggles
+### Quick toggles
+
 | Key | Action |
 |-----|--------|
-| `<leader>i` | Toggle indent lines |
+| `,i` | Toggle indent guides |
 
 ### Comments
+
 | Key | Action |
 |-----|--------|
-| `,cc` | Comment line/selection |
-| `,cu` | Uncomment line/selection |
+| `,cc` | Comment the current line or selection |
+| `,cu` | Uncomment the current line or selection |
 
-*Leader key is comma (`,`)*
+## Formatting and linting
 
-## 🔌 Plugin Architecture
+ALE formats on save for the file types below and always trims trailing
+whitespace. Disable it globally with `let g:ale_fix_on_save = 0` in `~/.vimrc`.
 
-### Theme & UI
-- **[onedark.vim](https://github.com/joshdick/onedark.vim)**: Modern dark theme
-- **[vim-airline](https://github.com/vim-airline/vim-airline)**: Enhanced status line
-- **[vim-devicons](https://github.com/ryanoasis/vim-devicons)**: File type icons
-- **[nerdtree](https://github.com/preservim/nerdtree)**: File explorer with Git integration
-- **[nerdtree-git-plugin](https://github.com/xuyuanp/nerdtree-git-plugin)**: Git integration for NERDTree
-- **[vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)**: Syntax highlighting for NERDTree
+| File type | Fixer(s) | Linter(s) |
+|-----------|----------|-----------|
+| Any | trailing whitespace/lines | — |
+| Python | `black`, `isort` | `mypy`, `pylint` |
+| Shell | `shfmt` | `shellcheck` |
+| Terraform | `terraform fmt` | `tflint` |
+| YAML | `yamlfix` | `yamllint` |
+| JSON | `jq` | — |
+| Dockerfile | — | `hadolint` |
+| Ansible | — | `ansible-lint` |
 
-### Code Intelligence
-- **[coc.nvim](https://github.com/neoclide/coc.nvim)**: Language Server Protocol support
-- **[ale](https://github.com/dense-analysis/ale)**: Asynchronous linting and fixing
-- **[auto-pairs](https://github.com/jiangmiao/auto-pairs)**: Smart bracket/quote pairing
-- **[nerdcommenter](https://github.com/preservim/nerdcommenter)**: Intelligent commenting
+Install only the tools you need; missing ones are skipped. Common install
+commands:
 
-### DevOps Tools
-- **[vim-fugitive](https://github.com/tpope/vim-fugitive)**: Git integration
-- **[vim-gitgutter](https://github.com/airblade/vim-gitgutter)**: Git change indicators
-- **[ansible-vim](https://github.com/pearofducks/ansible-vim)**: Ansible syntax support
-- **[vim-terraform](https://github.com/hashivim/vim-terraform)**: Terraform/HCL support
-- **[vim-kubernetes](https://github.com/andrewstuart/vim-kubernetes)**: Kubernetes YAML support
-- **[Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim)**: Docker syntax
-- **[vim-helm](https://github.com/towolf/vim-helm)**: Helm chart support
+```bash
+# macOS
+brew install black isort mypy pylint shfmt shellcheck hadolint \
+             terraform tflint ansible-lint yamllint jq node
 
-### Language Support
-- **[vim-go](https://github.com/fatih/vim-go)**: Go development
-- **[vim-markdown](https://github.com/plasticboy/vim-markdown)**: Enhanced Markdown
-- **[JSON.vim](https://github.com/vim-scripts/JSON.vim)**: JSON syntax
-- **[vim-yaml](https://github.com/stephpy/vim-yaml)**: YAML enhancements
-- **[nginx.vim](https://github.com/chr4/nginx.vim)**: Nginx configuration
-- **[vim-toml](https://github.com/cespare/vim-toml)**: TOML support
-- **[vim-vagrant](https://github.com/hashivim/vim-vagrant)**: Vagrantfile support
+# Python tools (any platform)
+pipx install black isort mypy pylint yamllint yamlfix ansible-lint
+```
 
-### Utilities
-- **[goyo.vim](https://github.com/junegunn/goyo.vim)**: Distraction-free writing
-- **[indentLine](https://github.com/Yggdroot/indentLine)**: Visual indent guides
-- **[trim.nvim](https://github.com/cappyzawa/trim.nvim)**: Automatic whitespace cleanup
-- **[webapi-vim](https://github.com/mattn/webapi-vim)**: Web API functionality for other plugins
+`hadolint`, `tflint`, `terraform` and `shfmt` also ship as standalone binaries —
+see their release pages if your package manager does not provide them.
 
-## 🎨 Customization
+## Customization
 
-The configuration is modular and well-documented. Key areas for customization:
+The configuration is a single, commented `vimrc`; edit it directly or keep your
+overrides in a separate file.
 
-- **Theme**: Change `colorscheme onedark` in the theme section
-- **Key mappings**: Modify the "Key Mappings" section
-- **Plugin settings**: Adjust in the "Plugin Configs" section
-- **Linters/Formatters**: Update ALE configuration for your tools
+- **Theme** — `colorscheme onedark` and the `g:onedark_*` options in the theme
+  section. The options must stay above `colorscheme`.
+- **Key mappings** — the `Key mappings` section at the bottom.
+- **Lint/format behaviour** — `g:ale_fixers` and `g:ale_linters`.
+- **Machine-specific overrides** — put them in `~/.vimrc.local`, which is sourced
+  at the end if it exists. It is never overwritten by the installer:
 
-## 🐛 Troubleshooting
+  ```vim
+  " ~/.vimrc.local
+  set colorcolumn=100
+  ```
 
-### Common Issues
+- **Language-server settings** — use `coc-settings.json`; `:CocConfig` opens it.
 
-1. **Plugins not loading**: Run `:PlugInstall` in Vim
-2. **CoC.nvim errors**: Install Node.js and run `:CocInstall` for language servers
-3. **Linting not working**: Ensure tools like `black`, `shellcheck`, `hadolint` are installed
-4. **Icons not showing**: Install a Nerd Font and configure your terminal
+Changes to `~/.vimrc` are re-sourced automatically when you save the file.
 
-### Performance
+## Project structure
 
-The configuration uses lazy loading to maintain fast startup times. Plugins load only when needed:
-- File type specific plugins load for relevant files
-- UI plugins load on command
-- Heavy plugins are deferred until first use
+```text
+.
+├── vimrc                  # The configuration
+├── install.sh             # Installer, backup and uninstall helper
+├── README.md              # This file
+├── _config.yml            # GitHub Pages / Jekyll settings
+├── CNAME                  # Custom domain for the documentation site
+└── .github/workflows/     # GitHub Pages deployment
+```
 
----
+## Troubleshooting
 
-**Made with ❤️ for DevOps Engineers**
+**Plugins are missing or out of date**
+Run `:PlugInstall` (or `:PlugUpdate`) inside Vim, then check `:PlugStatus`.
+
+**CoC does not complete anything**
+CoC needs Node.js and Vim 8.1+ with `+job` and `+timers`. Check `vim --version`,
+then run `:CocInfo` and install a server for the current file type with
+`:CocInstall coc-yaml` (for example).
+
+**`gd` does nothing in a Go file**
+vim-go's own `gd` mapping is disabled so CoC owns it. Install `coc-go` and make
+sure `gopls` is on your `PATH`.
+
+**Icons render as boxes**
+Install a Nerd Font and select it in your terminal. Without it, the UI still
+works but file icons fall back to placeholders.
+
+**Colors look wrong or the background is unreadable**
+The config enables `termguicolors`, which requires a true-color terminal. Remove
+the `set termguicolors` line (or run `:set notermguicolors`) if your terminal
+does not support it.
+
+**A fixer or linter never runs**
+`ALEInfo` lists the tools it found. Install the missing binary, or remove it
+from `g:ale_fixers` / `g:ale_linters`.
+
+**Startup feels slow**
+Measure it with `vim --startuptime /tmp/startup.log +q` and look for heavy
+plugins. Most language plugins are already lazy-loaded.
+
+## Uninstall
+
+```bash
+./install.sh --uninstall
+```
+
+The script moves `~/.vimrc` and the Vim configuration directories to
+`~/.vim-removed-<timestamp>`, restores the newest `~/.vim-backup-*` snapshot, and
+keeps the shared plugin cache in `~/.vim/plugged`. Nothing is deleted
+permanently.
+
+## Contributing
+
+Issues and pull requests are welcome. Keep the configuration portable across
+macOS and Linux, keep mappings documented here, and run `bash -n install.sh`
+before submitting a change to the installer.
+
+## License
+
+[GNU General Public License v3.0](LICENSE) © Maksudur Rahman Maateen
